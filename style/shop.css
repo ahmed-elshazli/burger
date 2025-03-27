@@ -1,0 +1,155 @@
+.shop{
+    width: 100%;
+    height: auto;
+    background: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+.shop_container{
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+.card{
+    width: calc((100% - 4rem) / 3);
+    height: auto;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem;
+}
+.card_img{
+    width: 100%;
+    height: 50%;
+    background: var(--white-color);
+    margin: auto;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.card_info h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.card_img img{
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    padding: 2rem;
+}
+
+.card_price{
+    display: flex;
+    justify-content: space-between;
+}
+.card_btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.card_btn button{
+    width: 50%;
+}
+.card_info .price span:nth-of-type(1){
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 2rem;
+    
+}
+.card_info .price span:nth-of-type(2){
+    text-decoration: line-through;
+    color: var(--black-secondray-color);
+}
+.card_info .rate span{
+    color: var(--black-secondray-color);
+}
+.card_info .rate i{
+    color: #FFD700;
+}
+.card_btn button{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.card_btn button:nth-of-type(1){
+    background: var(--white-color);
+}
+.card_btn button:nth-of-type(2){    
+    background: var(--main-color);
+    color: #fff;
+}
+.card_btn button:nth-of-type(1):hover{
+    background: var(--main-color);
+    color: #fff;
+}
+.card_btn button:nth-of-type(2):hover{
+    background: var(--white-color);
+    color: var(--main-color);
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: calc((100% - 2rem) / 2); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .shop_container {
+        gap: 1.5rem;
+    }
+    .card {
+        width: 100%; /* 1 card per row */
+        padding: 2rem;
+    }
+    .card_info h3 {
+        font-size: 1.8rem;
+    }
+    .card_btn button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop_container {
+        width: 100%;
+        gap: 1rem;
+    }
+    .card {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+    .card_info h3 {
+        font-size: 1.5rem;
+    }
+    .card_info .price span:nth-of-type(1) {
+        font-size: 1.8rem;
+    }
+    .card_btn {
+        flex-direction: column;
+    }
+    .card_btn button {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
